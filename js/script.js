@@ -109,18 +109,26 @@ window.addEventListener('DOMContentLoaded', function () {
     // Popup window
     let more = document.querySelector('.more'),
         overlay = document.querySelector('.overlay'),
-        close = document.querySelector('.popup-close');
+        close = document.querySelector('.popup-close'),
+        generalParent = document.querySelector('div.content');
 
-    more.addEventListener('click', function() {
-        overlay.style.display = 'block';
-        this.classList.add('more-splash');
-        document.body.style.overflow = 'hidden';
+    generalParent.addEventListener('click', function(event) {
+        let target = event.target;
+        if (target && target == more || target.classList.contains('description-btn')) {
+            overlay.style.display = 'block';
+            target.classList.add('more-splash');
+            document.body.style.overflow = 'hidden';
+        }
     });
 
-    close.addEventListener('click', function() {
-        overlay.style.display = 'none';
-        more.classList.remove('more-splash');
-        document.body.style.overflow = '';
+    document.body.addEventListener('click', function(event) {
+        let target = event.target,
+            clickedButton = document.querySelector('.more-splash');
+        if (target && target == close) {
+            overlay.style.display = 'none';
+            clickedButton.classList.remove('more-splash');
+            document.body.style.overflow = '';
+        }
     });
 
 });
