@@ -26,7 +26,7 @@ window.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    tabsParentContainer.addEventListener('click', function(event) {
+    tabsParentContainer.addEventListener('click', function (event) {
         let target = event.target;
         if (target && target.classList.contains('info-header-tab')) {
             for (let i = 0; i < tab.length; i++) {
@@ -45,9 +45,9 @@ window.addEventListener('DOMContentLoaded', function () {
     // Calculate remaining time
     function getTimeRemaining(endtime) {
         let t = Date.parse(endtime) - Date.parse(new Date()),
-            seconds = Math.floor((t/1000) % 60),
-            minutes = Math.floor((t/1000/60) % 60),
-            hours = Math.floor((t/1000/60/60));
+            seconds = Math.floor((t / 1000) % 60),
+            minutes = Math.floor((t / 1000 / 60) % 60),
+            hours = Math.floor((t / 1000 / 60 / 60));
         //let days = Math.floor((t/1000/60/60/24));
         return {
             'total': t,
@@ -68,16 +68,16 @@ window.addEventListener('DOMContentLoaded', function () {
         // Layout updater
         function updateClock() {
             let t = getTimeRemaining(endtime);
-            
+
             // Manipulate DOM
-           
+
             // hours
             if (t.hours < 10 && t.hours >= 0) {
                 hours.textContent = '0' + t.hours;
             } else {
                 hours.textContent = t.hours;
             }
-            
+
             // minutes
             if (t.minutes < 10 && t.minutes >= 0) {
                 minutes.textContent = '0' + t.minutes;
@@ -106,13 +106,14 @@ window.addEventListener('DOMContentLoaded', function () {
     }
     setClock('timer', deadline);
 
-    // Popup window
+    // Popup window -----------------------------------------------------------
     let more = document.querySelector('.more'),
         overlay = document.querySelector('.overlay'),
         close = document.querySelector('.popup-close'),
-        generalParent = document.querySelector('div.content');
+        generalParent = document.querySelector('div.content'),
+        body = document.querySelector('body');
 
-    generalParent.addEventListener('click', function(event) {
+    generalParent.addEventListener('click', function (event) {
         let target = event.target;
         if (target && target == more || target.classList.contains('description-btn')) {
             overlay.style.display = 'block';
@@ -121,7 +122,8 @@ window.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    document.body.addEventListener('click', function(event) {
+
+    body.addEventListener('click', function (event) {
         let target = event.target,
             clickedButton = document.querySelector('.more-splash');
         if (target && target == close) {
@@ -131,4 +133,59 @@ window.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    // Form -----------------------------------------------------------
+    let message = {
+        loading: 'Загрузка...',
+        success: 'Спасибо! Скоро мы с Вами свяжемся!',
+        failure: 'Что-то пошло не так...'
+    };
+
+    let form = document.querySelector('.main-form'),
+        statusMessage = document.createElement('div'),
+        contactForm = document.querySelector('#form'),
+        contactEmail = contactForm.querySelector('input[type="email"'),
+        contactTel = contactForm.querySelector('input[type="tel"'),
+        input;
+
+    statusMessage.classList.add('status');
+
+    body.addEventListener('submit', function (event) {
+        let target = event.target;
+
+        if (target && target == form || target == contactForm) {
+            event.preventDefault();
+            target.appendChild(statusMessage);
+            input = target.getElementsByTagName('input');
+            
+            let formData = new FormData(target);
+            let request = new XMLHttpRequest();
+
+            request.open('POST', 'server.php');
+            request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+            // request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+            let obj = {};
+            formData.forEach(function (value, key) {
+                obj[key] = value;
+            });
+            let json = JSON.stringify(obj);
+
+            request.send(json);
+            // request.send(formData);
+            
+            request.addEventListener('readystatechange', function () {
+                if (request.readyState < 4) {
+                    statusMessage.innerHTML = message.loading;
+                } else if (request.readyState === 4 && request.status === 200) {
+                    statusMessage.innerHTML = message.success;
+                } else {
+                    statusMessage.innerHTML = message.failure;
+                }
+            });
+
+            for (let i = 0; i < input.length; i++) {
+                input[i].value = '';
+            }
+        }
+    });
 });
