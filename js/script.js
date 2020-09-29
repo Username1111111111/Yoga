@@ -133,7 +133,7 @@ window.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Form -----------------------------------------------------------
+    // Form and Promise ----------------------------------------------------
     let message = {
         loading: 'Загрузка...',
         success: 'Спасибо! Скоро мы с Вами свяжемся!',
@@ -142,24 +142,22 @@ window.addEventListener('DOMContentLoaded', function () {
 
     let form = document.querySelector('.main-form'),
         statusMessage = document.createElement('div'),
-        contactForm = document.querySelector('#form'),
-        contactEmail = contactForm.querySelector('input[type="email"'),
-        contactTel = contactForm.querySelector('input[type="tel"'),
-        input;
+        contactForm = document.querySelector('#form');
 
     statusMessage.classList.add('status');
 
-    body.addEventListener('submit', function (event) {
-        let target = event.target;
-
-        if (target && target == form || target == contactForm) {
-            event.preventDefault();
+    function createFormData(target) {
+        return new Promise(function(resolve) {
             target.appendChild(statusMessage);
-            input = target.getElementsByTagName('input');
-            
             let formData = new FormData(target);
-            let request = new XMLHttpRequest();
+            resolve(formData);
+        });
+    }
 
+    function postData(formData) {
+        return new Promise(function(resolve, reject) {
+           
+            let request = new XMLHttpRequest();
             request.open('POST', 'server.php');
             request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
             // request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -170,22 +168,43 @@ window.addEventListener('DOMContentLoaded', function () {
             });
             let json = JSON.stringify(obj);
 
+            request.onreadystatechange = function() {
+                if (request.readyState < 4) {
+                    resolve();
+                } else if (request.status == 200 && request.readyState === 4) {
+                    resolve();
+                } else { 
+                    reject();
+                }
+            };
+
             request.send(json);
             // request.send(formData);
-            
-            request.addEventListener('readystatechange', function () {
-                if (request.readyState < 4) {
-                    statusMessage.innerHTML = message.loading;
-                } else if (request.readyState === 4 && request.status === 200) {
-                    statusMessage.innerHTML = message.success;
-                } else {
-                    statusMessage.innerHTML = message.failure;
-                }
-            });
+        });
+    }
 
+    function clearInput(target) {
+        return new Promise( function(resolve) {
+            let input = target.getElementsByTagName('input');
             for (let i = 0; i < input.length; i++) {
-                input[i].value = '';
+                input[i].value = ''; 
             }
+            resolve();
+        });
+    }
+
+    body.addEventListener('submit', function (event) {
+        let target = event.target;
+        if (target && target == form || target == contactForm) {
+            event.preventDefault();
+            createFormData(target)
+            // data from previous promise resolve(data) as (arrow) function argument is neccesary to pass to next function
+            .then(formData => postData(formData)) 
+            .then(() => statusMessage.innerHTML = message.loading)
+            .then(() => statusMessage.innerHTML = message.success)
+            .catch(() => statusMessage.innerHTML = message.failure)
+            .then(clearInput(target));
         }
     });
+
 });
