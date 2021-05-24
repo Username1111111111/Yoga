@@ -1,5 +1,5 @@
 function timer() {
-    let deadline = '2020-11-21';
+    let deadline = '2023-11-21';
 
     // Calculate remaining time
     function getTimeRemaining(endtime) {

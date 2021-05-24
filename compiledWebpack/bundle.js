@@ -1,56 +1,16 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./js/main.js":
-/*!********************!*\
-  !*** ./js/main.js ***!
-  \********************/
-/*! namespace exports */
-/*! exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _parts_calc_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./parts/calc.js */ "./js/parts/calc.js");
-/* harmony import */ var _parts_form_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./parts/form.js */ "./js/parts/form.js");
-/* harmony import */ var _parts_slider_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./parts/slider.js */ "./js/parts/slider.js");
-/* harmony import */ var _parts_tabs_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./parts/tabs.js */ "./js/parts/tabs.js");
-/* harmony import */ var _parts_timer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./parts/timer.js */ "./js/parts/timer.js");
-/* harmony import */ var _parts_modal_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./parts/modal.js */ "./js/parts/modal.js");
-
-
-
-
-
-
-window.addEventListener('DOMContentLoaded', function () {
-  'use strict';
-
-  (0,_parts_tabs_js__WEBPACK_IMPORTED_MODULE_1__.tabs)();
-  (0,_parts_timer_js__WEBPACK_IMPORTED_MODULE_2__.timer)();
-  (0,_parts_modal_js__WEBPACK_IMPORTED_MODULE_3__.modal)();
-  (0,_parts_form_js__WEBPACK_IMPORTED_MODULE_0__.form)();
-  (0,_parts_slider_js__WEBPACK_IMPORTED_MODULE_4__.slider)();
-  (0,_parts_calc_js__WEBPACK_IMPORTED_MODULE_5__.calc)();
-});
-
-/***/ }),
-
 /***/ "./js/parts/calc.js":
 /*!**************************!*\
   !*** ./js/parts/calc.js ***!
   \**************************/
-/*! namespace exports */
-/*! export calc [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "calc": () => /* binding */ calc
+/* harmony export */   "calc": () => (/* binding */ calc)
 /* harmony export */ });
 function calc() {
   var persons = document.querySelectorAll('.counter-block-input')[0],
@@ -99,29 +59,25 @@ function calc() {
 /*!**************************!*\
   !*** ./js/parts/form.js ***!
   \**************************/
-/*! namespace exports */
-/*! export form [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_require__.n, __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "form": () => /* binding */ form
+/* harmony export */   "form": () => (/* binding */ form)
 /* harmony export */ });
-/* harmony import */ var core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es6.promise */ "./node_modules/core-js/modules/es6.promise.js");
-/* harmony import */ var core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es6_object_to_string__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es6.object.to-string */ "./node_modules/core-js/modules/es6.object.to-string.js");
-/* harmony import */ var core_js_modules_es6_object_to_string__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_object_to_string__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es6_object_to_string_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es6.object.to-string.js */ "./node_modules/core-js/modules/es6.object.to-string.js");
+/* harmony import */ var core_js_modules_es6_object_to_string_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_object_to_string_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es6_promise_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es6.promise.js */ "./node_modules/core-js/modules/es6.promise.js");
+/* harmony import */ var core_js_modules_es6_promise_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_promise_js__WEBPACK_IMPORTED_MODULE_1__);
 
 
 
 function form() {
   var message = {
-    loading: 'Загрузка...',
-    success: 'Спасибо! Скоро мы с Вами свяжемся!',
-    failure: 'Что-то пошло не так...'
+    loading: 'Loading...',
+    success: 'Thanks! We will contact you later!',
+    failure: 'Something went wrong...'
   };
   var form = document.querySelector('.main-form'),
       statusMessage = document.createElement('div'),
@@ -203,16 +159,12 @@ function form() {
 /*!***************************!*\
   !*** ./js/parts/modal.js ***!
   \***************************/
-/*! namespace exports */
-/*! export modal [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "modal": () => /* binding */ modal
+/* harmony export */   "modal": () => (/* binding */ modal)
 /* harmony export */ });
 function modal() {
   var more = document.querySelector('.more'),
@@ -249,16 +201,12 @@ function modal() {
 /*!****************************!*\
   !*** ./js/parts/slider.js ***!
   \****************************/
-/*! namespace exports */
-/*! export slider [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "slider": () => /* binding */ slider
+/* harmony export */   "slider": () => (/* binding */ slider)
 /* harmony export */ });
 function slider() {
   var slideIndex = 1,
@@ -320,16 +268,12 @@ function slider() {
 /*!**************************!*\
   !*** ./js/parts/tabs.js ***!
   \**************************/
-/*! namespace exports */
-/*! export tabs [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "tabs": () => /* binding */ tabs
+/* harmony export */   "tabs": () => (/* binding */ tabs)
 /* harmony export */ });
 function tabs() {
   var tab = document.querySelectorAll('.info-header-tab'),
@@ -376,19 +320,15 @@ function tabs() {
 /*!***************************!*\
   !*** ./js/parts/timer.js ***!
   \***************************/
-/*! namespace exports */
-/*! export timer [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "timer": () => /* binding */ timer
+/* harmony export */   "timer": () => (/* binding */ timer)
 /* harmony export */ });
 function timer() {
-  var deadline = '2020-11-21'; // Calculate remaining time
+  var deadline = '2023-11-21'; // Calculate remaining time
 
   function getTimeRemaining(endtime) {
     var t = Date.parse(endtime) - Date.parse(new Date()),
@@ -459,8 +399,6 @@ function timer() {
 /*!*****************************************************!*\
   !*** ./node_modules/core-js/modules/_a-function.js ***!
   \*****************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
 /***/ ((module) => {
 
 module.exports = function (it) {
@@ -475,8 +413,6 @@ module.exports = function (it) {
 /*!******************************************************!*\
   !*** ./node_modules/core-js/modules/_an-instance.js ***!
   \******************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
 /***/ ((module) => {
 
 module.exports = function (it, Constructor, name, forbiddenField) {
@@ -492,8 +428,6 @@ module.exports = function (it, Constructor, name, forbiddenField) {
 /*!****************************************************!*\
   !*** ./node_modules/core-js/modules/_an-object.js ***!
   \****************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var isObject = __webpack_require__(/*! ./_is-object */ "./node_modules/core-js/modules/_is-object.js");
@@ -509,8 +443,6 @@ module.exports = function (it) {
 /*!**************************************************!*\
   !*** ./node_modules/core-js/modules/_classof.js ***!
   \**************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // getting tag from 19.1.3.6 Object.prototype.toString()
@@ -544,8 +476,6 @@ module.exports = function (it) {
 /*!**********************************************!*\
   !*** ./node_modules/core-js/modules/_cof.js ***!
   \**********************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
 /***/ ((module) => {
 
 var toString = {}.toString;
@@ -561,11 +491,9 @@ module.exports = function (it) {
 /*!***********************************************!*\
   !*** ./node_modules/core-js/modules/_core.js ***!
   \***********************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
 /***/ ((module) => {
 
-var core = module.exports = { version: '2.6.11' };
+var core = module.exports = { version: '2.6.12' };
 if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 
 
@@ -575,8 +503,6 @@ if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 /*!**********************************************!*\
   !*** ./node_modules/core-js/modules/_ctx.js ***!
   \**********************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // optional / simple context binding
@@ -607,8 +533,6 @@ module.exports = function (fn, that, length) {
 /*!******************************************************!*\
   !*** ./node_modules/core-js/modules/_descriptors.js ***!
   \******************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // Thank's IE8 for his funny defineProperty
@@ -623,8 +547,6 @@ module.exports = !__webpack_require__(/*! ./_fails */ "./node_modules/core-js/mo
 /*!*****************************************************!*\
   !*** ./node_modules/core-js/modules/_dom-create.js ***!
   \*****************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__, module */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var isObject = __webpack_require__(/*! ./_is-object */ "./node_modules/core-js/modules/_is-object.js");
@@ -642,8 +564,6 @@ module.exports = function (it) {
 /*!*************************************************!*\
   !*** ./node_modules/core-js/modules/_export.js ***!
   \*************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var global = __webpack_require__(/*! ./_global */ "./node_modules/core-js/modules/_global.js");
@@ -697,8 +617,6 @@ module.exports = $export;
 /*!************************************************!*\
   !*** ./node_modules/core-js/modules/_fails.js ***!
   \************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
 /***/ ((module) => {
 
 module.exports = function (exec) {
@@ -716,8 +634,6 @@ module.exports = function (exec) {
 /*!*************************************************!*\
   !*** ./node_modules/core-js/modules/_for-of.js ***!
   \*************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var ctx = __webpack_require__(/*! ./_ctx */ "./node_modules/core-js/modules/_ctx.js");
@@ -753,8 +669,6 @@ exports.RETURN = RETURN;
 /*!*************************************************************!*\
   !*** ./node_modules/core-js/modules/_function-to-string.js ***!
   \*************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__(/*! ./_shared */ "./node_modules/core-js/modules/_shared.js")('native-function-to-string', Function.toString);
@@ -766,8 +680,6 @@ module.exports = __webpack_require__(/*! ./_shared */ "./node_modules/core-js/mo
 /*!*************************************************!*\
   !*** ./node_modules/core-js/modules/_global.js ***!
   \*************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
 /***/ ((module) => {
 
 // https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
@@ -784,8 +696,6 @@ if (typeof __g == 'number') __g = global; // eslint-disable-line no-undef
 /*!**********************************************!*\
   !*** ./node_modules/core-js/modules/_has.js ***!
   \**********************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
 /***/ ((module) => {
 
 var hasOwnProperty = {}.hasOwnProperty;
@@ -800,8 +710,6 @@ module.exports = function (it, key) {
 /*!***********************************************!*\
   !*** ./node_modules/core-js/modules/_hide.js ***!
   \***********************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var dP = __webpack_require__(/*! ./_object-dp */ "./node_modules/core-js/modules/_object-dp.js");
@@ -820,8 +728,6 @@ module.exports = __webpack_require__(/*! ./_descriptors */ "./node_modules/core-
 /*!***********************************************!*\
   !*** ./node_modules/core-js/modules/_html.js ***!
   \***********************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__, module */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var document = __webpack_require__(/*! ./_global */ "./node_modules/core-js/modules/_global.js").document;
@@ -834,8 +740,6 @@ module.exports = document && document.documentElement;
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/_ie8-dom-define.js ***!
   \*********************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = !__webpack_require__(/*! ./_descriptors */ "./node_modules/core-js/modules/_descriptors.js") && !__webpack_require__(/*! ./_fails */ "./node_modules/core-js/modules/_fails.js")(function () {
@@ -849,8 +753,6 @@ module.exports = !__webpack_require__(/*! ./_descriptors */ "./node_modules/core
 /*!*************************************************!*\
   !*** ./node_modules/core-js/modules/_invoke.js ***!
   \*************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
 /***/ ((module) => {
 
 // fast apply, http://jsperf.lnkit.com/fast-apply/5
@@ -877,8 +779,6 @@ module.exports = function (fn, args, that) {
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/_is-array-iter.js ***!
   \********************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // check on default Array iterator
@@ -897,8 +797,6 @@ module.exports = function (it) {
 /*!****************************************************!*\
   !*** ./node_modules/core-js/modules/_is-object.js ***!
   \****************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
 /***/ ((module) => {
 
 module.exports = function (it) {
@@ -912,8 +810,6 @@ module.exports = function (it) {
 /*!****************************************************!*\
   !*** ./node_modules/core-js/modules/_iter-call.js ***!
   \****************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // call something on iterator step with safe closing on error
@@ -936,8 +832,6 @@ module.exports = function (iterator, fn, value, entries) {
 /*!******************************************************!*\
   !*** ./node_modules/core-js/modules/_iter-detect.js ***!
   \******************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var ITERATOR = __webpack_require__(/*! ./_wks */ "./node_modules/core-js/modules/_wks.js")('iterator');
@@ -970,8 +864,6 @@ module.exports = function (exec, skipClosing) {
 /*!****************************************************!*\
   !*** ./node_modules/core-js/modules/_iterators.js ***!
   \****************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
 /***/ ((module) => {
 
 module.exports = {};
@@ -983,8 +875,6 @@ module.exports = {};
 /*!**************************************************!*\
   !*** ./node_modules/core-js/modules/_library.js ***!
   \**************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
 /***/ ((module) => {
 
 module.exports = false;
@@ -996,8 +886,6 @@ module.exports = false;
 /*!****************************************************!*\
   !*** ./node_modules/core-js/modules/_microtask.js ***!
   \****************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__, module */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var global = __webpack_require__(/*! ./_global */ "./node_modules/core-js/modules/_global.js");
@@ -1077,10 +965,6 @@ module.exports = function () {
 /*!*****************************************************************!*\
   !*** ./node_modules/core-js/modules/_new-promise-capability.js ***!
   \*****************************************************************/
-/*! default exports */
-/*! export f [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: module, __webpack_require__ */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -1110,10 +994,6 @@ module.exports.f = function (C) {
 /*!****************************************************!*\
   !*** ./node_modules/core-js/modules/_object-dp.js ***!
   \****************************************************/
-/*! default exports */
-/*! export f [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_exports__, __webpack_require__ */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 var anObject = __webpack_require__(/*! ./_an-object */ "./node_modules/core-js/modules/_an-object.js");
@@ -1140,8 +1020,6 @@ exports.f = __webpack_require__(/*! ./_descriptors */ "./node_modules/core-js/mo
 /*!**************************************************!*\
   !*** ./node_modules/core-js/modules/_perform.js ***!
   \**************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
 /***/ ((module) => {
 
 module.exports = function (exec) {
@@ -1159,8 +1037,6 @@ module.exports = function (exec) {
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/_promise-resolve.js ***!
   \**********************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var anObject = __webpack_require__(/*! ./_an-object */ "./node_modules/core-js/modules/_an-object.js");
@@ -1183,8 +1059,6 @@ module.exports = function (C, x) {
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/_property-desc.js ***!
   \********************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
 /***/ ((module) => {
 
 module.exports = function (bitmap, value) {
@@ -1203,8 +1077,6 @@ module.exports = function (bitmap, value) {
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/modules/_redefine-all.js ***!
   \*******************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var redefine = __webpack_require__(/*! ./_redefine */ "./node_modules/core-js/modules/_redefine.js");
@@ -1220,8 +1092,6 @@ module.exports = function (target, src, safe) {
 /*!***************************************************!*\
   !*** ./node_modules/core-js/modules/_redefine.js ***!
   \***************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__, module */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var global = __webpack_require__(/*! ./_global */ "./node_modules/core-js/modules/_global.js");
@@ -1263,8 +1133,6 @@ __webpack_require__(/*! ./_core */ "./node_modules/core-js/modules/_core.js").in
 /*!******************************************************!*\
   !*** ./node_modules/core-js/modules/_set-species.js ***!
   \******************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -1289,8 +1157,6 @@ module.exports = function (KEY) {
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/_set-to-string-tag.js ***!
   \************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__, module */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var def = __webpack_require__(/*! ./_object-dp */ "./node_modules/core-js/modules/_object-dp.js").f;
@@ -1308,8 +1174,6 @@ module.exports = function (it, tag, stat) {
 /*!*************************************************!*\
   !*** ./node_modules/core-js/modules/_shared.js ***!
   \*************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var core = __webpack_require__(/*! ./_core */ "./node_modules/core-js/modules/_core.js");
@@ -1322,7 +1186,7 @@ var store = global[SHARED] || (global[SHARED] = {});
 })('versions', []).push({
   version: core.version,
   mode: __webpack_require__(/*! ./_library */ "./node_modules/core-js/modules/_library.js") ? 'pure' : 'global',
-  copyright: '© 2019 Denis Pushkarev (zloirock.ru)'
+  copyright: '© 2020 Denis Pushkarev (zloirock.ru)'
 });
 
 
@@ -1332,8 +1196,6 @@ var store = global[SHARED] || (global[SHARED] = {});
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/_species-constructor.js ***!
   \**************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // 7.3.20 SpeciesConstructor(O, defaultConstructor)
@@ -1353,8 +1215,6 @@ module.exports = function (O, D) {
 /*!***********************************************!*\
   !*** ./node_modules/core-js/modules/_task.js ***!
   \***********************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var ctx = __webpack_require__(/*! ./_ctx */ "./node_modules/core-js/modules/_ctx.js");
@@ -1449,8 +1309,6 @@ module.exports = {
 /*!*****************************************************!*\
   !*** ./node_modules/core-js/modules/_to-integer.js ***!
   \*****************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
 /***/ ((module) => {
 
 // 7.1.4 ToInteger
@@ -1467,8 +1325,6 @@ module.exports = function (it) {
 /*!****************************************************!*\
   !*** ./node_modules/core-js/modules/_to-length.js ***!
   \****************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // 7.1.15 ToLength
@@ -1485,8 +1341,6 @@ module.exports = function (it) {
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/modules/_to-primitive.js ***!
   \*******************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // 7.1.1 ToPrimitive(input [, PreferredType])
@@ -1509,8 +1363,6 @@ module.exports = function (it, S) {
 /*!**********************************************!*\
   !*** ./node_modules/core-js/modules/_uid.js ***!
   \**********************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
 /***/ ((module) => {
 
 var id = 0;
@@ -1526,8 +1378,6 @@ module.exports = function (key) {
 /*!*****************************************************!*\
   !*** ./node_modules/core-js/modules/_user-agent.js ***!
   \*****************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var global = __webpack_require__(/*! ./_global */ "./node_modules/core-js/modules/_global.js");
@@ -1542,8 +1392,6 @@ module.exports = navigator && navigator.userAgent || '';
 /*!**********************************************!*\
   !*** ./node_modules/core-js/modules/_wks.js ***!
   \**********************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__, module */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var store = __webpack_require__(/*! ./_shared */ "./node_modules/core-js/modules/_shared.js")('wks');
@@ -1565,8 +1413,6 @@ $exports.store = store;
 /*!******************************************************************!*\
   !*** ./node_modules/core-js/modules/core.get-iterator-method.js ***!
   \******************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var classof = __webpack_require__(/*! ./_classof */ "./node_modules/core-js/modules/_classof.js");
@@ -1585,8 +1431,6 @@ module.exports = __webpack_require__(/*! ./_core */ "./node_modules/core-js/modu
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.to-string.js ***!
   \**************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__ */
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -1608,8 +1452,6 @@ if (test + '' != '[object z]') {
 /*!*****************************************************!*\
   !*** ./node_modules/core-js/modules/es6.promise.js ***!
   \*****************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__ */
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -1911,8 +1753,9 @@ $export($export.S + $export.F * !(USE_NATIVE && __webpack_require__(/*! ./_iter-
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
-/******/ 		if(__webpack_module_cache__[moduleId]) {
-/******/ 			return __webpack_module_cache__[moduleId].exports;
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
@@ -1934,8 +1777,8 @@ $export($export.S + $export.F * !(USE_NATIVE && __webpack_require__(/*! ./_iter-
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
 /******/ 		__webpack_require__.n = (module) => {
 /******/ 			var getter = module && module.__esModule ?
-/******/ 				() => module['default'] :
-/******/ 				() => module;
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
 /******/ 			__webpack_require__.d(getter, { a: getter });
 /******/ 			return getter;
 /******/ 		};
@@ -1955,7 +1798,7 @@ $export($export.S + $export.F * !(USE_NATIVE && __webpack_require__(/*! ./_iter-
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => Object.prototype.hasOwnProperty.call(obj, prop)
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
@@ -1970,10 +1813,38 @@ $export($export.S + $export.F * !(USE_NATIVE && __webpack_require__(/*! ./_iter-
 /******/ 	})();
 /******/ 	
 /************************************************************************/
-/******/ 	// startup
-/******/ 	// Load entry module
-/******/ 	__webpack_require__("./js/main.js");
-/******/ 	// This entry module used 'exports' so it can't be inlined
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+(() => {
+"use strict";
+/*!********************!*\
+  !*** ./js/main.js ***!
+  \********************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _parts_calc_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./parts/calc.js */ "./js/parts/calc.js");
+/* harmony import */ var _parts_form_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./parts/form.js */ "./js/parts/form.js");
+/* harmony import */ var _parts_slider_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./parts/slider.js */ "./js/parts/slider.js");
+/* harmony import */ var _parts_tabs_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./parts/tabs.js */ "./js/parts/tabs.js");
+/* harmony import */ var _parts_timer_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./parts/timer.js */ "./js/parts/timer.js");
+/* harmony import */ var _parts_modal_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./parts/modal.js */ "./js/parts/modal.js");
+
+
+
+
+
+
+window.addEventListener('DOMContentLoaded', function () {
+  'use strict';
+
+  (0,_parts_tabs_js__WEBPACK_IMPORTED_MODULE_3__.tabs)();
+  (0,_parts_timer_js__WEBPACK_IMPORTED_MODULE_4__.timer)();
+  (0,_parts_modal_js__WEBPACK_IMPORTED_MODULE_5__.modal)();
+  (0,_parts_form_js__WEBPACK_IMPORTED_MODULE_1__.form)();
+  (0,_parts_slider_js__WEBPACK_IMPORTED_MODULE_2__.slider)();
+  (0,_parts_calc_js__WEBPACK_IMPORTED_MODULE_0__.calc)();
+});
+})();
+
 /******/ })()
 ;
 //# sourceMappingURL=bundle.js.map

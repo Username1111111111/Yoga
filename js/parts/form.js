@@ -1,8 +1,8 @@
 function form() {
     let message = {
-        loading: 'Загрузка...',
-        success: 'Спасибо! Скоро мы с Вами свяжемся!',
-        failure: 'Что-то пошло не так...'
+        loading: 'Loading...',
+        success: 'Thanks! We will contact you later!',
+        failure: 'Something went wrong...'
     };
 
     let form = document.querySelector('.main-form'),
